@@ -29,7 +29,7 @@ github:
   username: samyak8Ktr # change to your GitHub username
 
 twitter:
-  username: samyakkatiyar # change to your Twitter username
+  username: Samyak_katiyar # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,11 +38,11 @@ social:
   email: samyakkatiyar2@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/Samyak_katiyar # change to your Twitter homepage
+    - https://github.com/samyak8Ktr # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/samyakkatiyar
 
 # Site Verification Settings
 webmaster_verifications:

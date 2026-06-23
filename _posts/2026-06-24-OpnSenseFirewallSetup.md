@@ -24,12 +24,12 @@ Covered in this post:
 5. Blacklisting based web filtering.
 
 Below is a representation of the lab:
-![[SL1.png]]
+![](/images/SL1.png)
 
 # OPNSENSE INSTALLATION
 
 Head to the Opensense website and install the DVD ISO.
-![[Pasted image 20260623223824.png]]
+![](/images/Pasted image 20260623223824.png)
 
 ### Virtual Box
 
@@ -58,6 +58,7 @@ For my VM:
 | --------------------- | ---------------- | -------------------------------- | --------------- |
 | em0                   | LAN              | internal network (intnet)        | 10.0.0.0/24     |
 | em2                   | WAN              | NAT network (internet_simulator) | 192.168.81.0/24 |
+
 Next we will assign manual IP to the LAN and WAN interfaces.
 
 Two  things we skip for now:
@@ -70,14 +71,14 @@ Set the WAN gateway as 192.168.81.1 (vbox NAT gateway) for internet access on op
 
 Attach a Kali VM to the LAN network we will now access the Console.
 
-![[console.png]]
+![](/images/console.png)
 
 Go to firmware > Updates to install and update the vmware tools and the OS.
 
 # SURICATA IPS / IDS
 
 Suricata is a very well known IPS / IDS and comes built in with OpnSense.
-![[suricata.png]]
+![](/images/suricata.png)
 We will set it on our LAN interface as we want to monitor the activites of the connected hosts.
 
 Some important settings:
@@ -86,7 +87,7 @@ Some important settings:
 - Promiscuous mode:  Help IPS monitor traffic intended for other hosts. 
 
 Screenshot for reference.
-![[IDS.png]]
+![](/images/IDS.png)
 
 ### Custom rule making 
 
@@ -136,7 +137,7 @@ python3 -m http.server 80
 Opnsense by default comes with SSH open. So transfer XML to `/usr/local/opnsense/scripts/suricata/metadata/rules` directory.
 
 import the rule in the rules directory,  refresh the IPS server > download > enable the rule.
-![[IDS2.png]]
+![](/images/IDS2.png)
 
 ### Testing IDS Rules
 
@@ -147,7 +148,7 @@ $ sudo nmap -sS firewall_ip
 ```
 
 See the alerts (my firewall IP was 10.0.0.254 at the time).
-![[IDS3.png]]
+![](/images/IDS3.png)
 
 
 
@@ -159,7 +160,7 @@ See the alerts (my firewall IP was 10.0.0.254 at the time).
 
 Squid is another popular web proxy, It comes with features like caching for performance improvement to blacklist based website filtering **SquidGuard**.
 
-![[squid.png]]
+![](/images/squid.png)
 
 Earlier Opnsense shipped with squid but now we need to enable in plugins.
 
@@ -171,7 +172,7 @@ For that, create a Certificate authority (CA) on the OPNsense firewall (for SSL 
 
 We can add our organization details in this certificate.
 
-![[Pasted image 20260623233848.png]]
+![](/images/Pasted image 20260623233848.png)
 
 
 
@@ -194,7 +195,7 @@ now the client trust our certificate, we can go for the web proxy.
 
 We need to turn on some setting in the `forward proxy` menu.
 
-![[proxy1.png]]
+![](/images/proxy1.png)
 
 ### Redirection rule
 Now we need to tell the firewall to send any HTTP / HTTPS traffic to it should be redirected to the respective proxies running on it.
@@ -204,13 +205,13 @@ Firewall > NAT > Destination NAT > new rule (as redirection rules are configured
 we need to redirect all traffic from LAN net -> anywhere port 80 (HTTP), toward our firewall proxy listener (127.0.0.1:80).
 
 [Docs][https://docs.opnsense.org/manual/how-tos/proxytransparent.html]
-![[Pasted image 20260623234238.png]]
+![](/images/Pasted image 20260623234238.png)
 
 ### SSL proxy?
 
 Some people on reddit say it creates issues and it does, due to HTTPS and browser security. But here we will make a rule from the documentation
 
-![[images/Pasted image 20260623234256.png]]
+![](/images/Pasted image 20260623234256.png)
 
 ### SSL no bump sites?
 We can add sites which this proxy avoids, as this is an MITM method secure websites like banking websites might identify our connection as malicious. https://docs.opnsense.org/manual/how-tos/proxytransparent.html&v=o67NaMbjwaE
@@ -226,7 +227,7 @@ Next we can download ACLs > edit > categories > select desired ones > download A
 
 Make sure of the sequence.
 
-![[Pasted image 20260623234336.png]]
+![](/images/Pasted image 20260623234336.png)
 
 > [!note]
 > In auto generated rules there are anti-lockout rules, that prevent us from blocking ourselfs from the web GUI.
@@ -239,7 +240,7 @@ Finally after all this jargon, we will notice two things from the windows host:
 - Internet will work.
 - Social media sites does not.
 
-![[Pasted image 20260623234537.png]]
+![](/images/Pasted image 20260623234537.png)
 
 Thanks for reading meet you in SL2 post.
 

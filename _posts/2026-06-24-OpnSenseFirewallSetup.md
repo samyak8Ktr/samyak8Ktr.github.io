@@ -210,7 +210,7 @@ we need to redirect all traffic from LAN net -> anywhere port 80 (HTTP), toward 
 
 Some people on reddit say it creates issues and it does, due to HTTPS and browser security. But here we will make a rule from the documentation
 
-![[Pasted image 20260623234256.png]]
+![[images/Pasted image 20260623234256.png]]
 
 ### SSL no bump sites?
 We can add sites which this proxy avoids, as this is an MITM method secure websites like banking websites might identify our connection as malicious. https://docs.opnsense.org/manual/how-tos/proxytransparent.html&v=o67NaMbjwaE

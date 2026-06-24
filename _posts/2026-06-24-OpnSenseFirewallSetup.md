@@ -6,7 +6,7 @@ tags:
   - SecurityEngineering
   - NetworkAdministration
 ---
-# INTRODUCTION
+## INTRODUCTION
 
 **SCENARIO:** We are appointed as security engineer to secure a virtual company named "samyak.corp". Currently there have 50+ employees in the company and there are no security measures, no network management, no AD, nothing just all connected to a LAN.  
 
@@ -23,10 +23,18 @@ Covered in this post:
 4. Squid web proxy setup.
 5. Blacklisting based web filtering.
 
+As in a home lab we not have a WAN we will use virtual NAT network that has internet connectivity.
+
+And make the firewall's default gateway the gateway of the WAN network.
+
+For the LAN network we will connect a second interface of the firewall to an virtual internal network where the clients will join the firewall (LAN's gateway)
+
+This will act like a L2 switch behind the firewall.
+
 Below is a representation of the lab:
 ![](/images/SL1.png)
 
-# OPNSENSE INSTALLATION
+## OPNSENSE INSTALLATION
 
 Head to the Opensense website and install the DVD ISO.
 ![](/images/Pasted image 20260623223824.png)
@@ -49,7 +57,7 @@ Acceptable configurations
 
 Go with the installer install on the virtual disk (8 gb).  Also, we might need to attach the installation media (opnsense ISO) while the first boot.
 
-# INITIAL CONFIGURATION
+## INITIAL CONFIGURATION
 Head over Interface assignment and identify em/x using MAC addresses
 
 For my VM:
@@ -75,7 +83,7 @@ Attach a Kali VM to the LAN network we will now access the Console.
 
 Go to firmware > Updates to install and update the vmware tools and the OS.
 
-# SURICATA IPS / IDS
+## SURICATA IPS / IDS
 
 Suricata is a very well known IPS / IDS and comes built in with OpnSense.
 ![](/images/suricata.png)
@@ -152,7 +160,7 @@ See the alerts (my firewall IP was 10.0.0.254 at the time).
 
 
 
-# SQUID WEB PROXY
+## SQUID WEB PROXY
 
 **TASK:** Lot of employees are wasting their time on social media platforms instead of work so we need to block these websites.
 

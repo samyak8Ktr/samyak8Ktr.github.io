@@ -163,7 +163,7 @@ now cable disconnect the MASTER from the virtual box settings.
 ![](images/Pasted image 20260624105614.png)
 
 The LAN VIP will still continue responding.
-![](Pasted image 20260624105631.png)
+![](/images/Pasted image 20260624105631.png)
 
 Also check the widget the SLAVE firewall will now become the master
 
@@ -172,7 +172,7 @@ Also check the widget the SLAVE firewall will now become the master
 First of all assign the LAN VIP as the default gateway on the windows host. Now, browse internet with or without the MASTER cable connected .
 
 The internet works.
-![](Pasted image 20260624105737.png)
+![](/images/Pasted image 20260624105737.png)
 
 Thanks for reading meet you in the next post where we will make a setup that will handle WAN failover.
 

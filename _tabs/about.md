@@ -5,6 +5,9 @@ order: 4
 ---
 
 # About Me?
-Nothing much special just a computer science graduate to likes to go in details with tech and have a passion for cybersecurity.
+
+Nothing much special, just a computer science graduate. 
+
+Who likes to go in details with tech and have a passion for cybersecurity.
 
 -- Samyak Katiyar.

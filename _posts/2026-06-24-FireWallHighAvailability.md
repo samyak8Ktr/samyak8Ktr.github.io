@@ -23,13 +23,13 @@ ie. if one firewall goes down there is a backup firewall. So clients may resume 
 
 ![](images/Pasted image 20260624110832.png)
 
-We will achieve this by establishing a CARP (Common redundancy address protocol) between the "MASTER" and the "BACKUP / SLAVE" firewall. both connected through another private network "pfsync link".
+We will achieve this by establishing a **CARP** (Common redundancy address protocol) between the "**MASTER**" and the "**BACKUP / SLAVE**" firewall. both connected through another private network "pfsync link".
 
 This protocol is like a heartbeat which will tell both firewalls each other's status.
 
-The clients will use the LAN VIP (Virtual IP) as the default gateway (10.0.0.253).
+The clients will use the **LAN VIP** (Virtual IP) as the default gateway (10.0.0.253).
 
-Both the firewalls will NAT translate the outbound traffic to the WAN VIP, Not the master IP not the BACKUP IP the  WAN VIP (192.168.81.253).
+Both the firewalls will NAT translate the outbound traffic to the WAN VIP, Not the master IP not the BACKUP IP the  **WAN VIP** (192.168.81.253).
 
 ## NETWORK SETUP
 
@@ -65,9 +65,9 @@ Next to make the backup firewall shutdown current firewall, and make a clone of 
 Make sure that you set new MAC addresses on all interfaces form the drop down.
 
 Start the backup firewall and assign IPs:
-LAN: 10.0.0.252 / 24
-WAN: 192.168.81.252 / 24
-pfsync: 10.0.8.2 / 24
+1. LAN: 10.0.0.252 / 24
+2. WAN: 192.168.81.252 / 24
+3. pfsync: 10.0.8.2 / 24
 
 As now there will be not IP / MAC clashes on network, start the master firewall too.
 
@@ -75,14 +75,15 @@ As now there will be not IP / MAC clashes on network, start the master firewall 
 
 We will make a common virtual IP on both master and slave.
 
- **VHID**: VIP on separate interface will have a separate VHID group.
- **SKEW:** The less the value the more priority the firewall has, master should have skew 0 (the lowest value).
- **MODE:** CARP required for HA setups.
+ - **VHID**: VIP on separate interface will have a separate VHID group.
+ - **SKEW:** The less the value the more priority the firewall has, master should have skew 0 (the lowest value).
+ - **MODE:** CARP required for HA setups.
 
  
 Interface > virtual IP > settings
 
 **MASTER**
+
 assign skew = 1. 
 
 For WAN, VHID 1

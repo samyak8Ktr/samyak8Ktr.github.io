@@ -42,10 +42,11 @@ Head to the Opensense website and install the DVD ISO.
 
 ### Virtual Box
 
-> [!note]
+
 > - Use Virtual box for this home lab. Do NOT use vmware workstation as it's MAC spoofing security will hinder CARP and virtual IP connectivity later in the lab.
 > - I spent 10+ hours trying to troubleshoot this issue without any success.
 > - In case of vmware ESXI and Vsphere allowing MAC changing and forced transmissions, should solve this issue.
+{: .prompt-warning }
 
 
 Install Virtual box > New > select Opnsense ISO.
@@ -118,9 +119,9 @@ alert tcp $HOME_NET any -> 10.0.0.251/24 any (msg:"POSSIBLE NMAP SYNSTEALTH SCAN
 - `count 50, seconds 1`: 50+ packets counted under 1 second.
 - Other information can be seen in suricata docs.
 
-> [!tip]
 > - Use proper rule syntax, send it to AI for syntax checking.
 > - refresh the IPS server after updating the rules.
+{: .prompt-tip }
 
 As we want to save this rule on the firewall one option it to save it on the kali VM connected to LAN, with this file:
 
@@ -190,8 +191,8 @@ To deploy certificates we may:
 - Use GPO
 - Use AD certificate services
 
-> [!note]
 > change the cert file extension from .pem to .crt 
+{: .prompt-tip }
 
 right click > install cert > install on local machine > put on trusted root folder > done
 
@@ -238,12 +239,13 @@ Make sure of the sequence.
 
 ![](/images/Pasted image 20260623234336.png)
 
-> [!note]
 > In auto generated rules there are anti-lockout rules, that prevent us from blocking ourselfs from the web GUI.
 > so our rules should'nt be above those.
+{: .prompt-danger }
 
-> [!success]
+
 > Set the firewall as the default gateway in the windows host and connect it only to the LAN network for proxy / filter to work.
+{: .prompt-tip }
 
 Finally after all this jargon, we will notice two things from the windows host:
 - Internet will work.

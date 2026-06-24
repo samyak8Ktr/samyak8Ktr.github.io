@@ -16,10 +16,10 @@ timezone:
 
 title: ARMORY # the main title
 
-tagline: Serious Sam's Cybersecurity Blog # it will display as the subtitle
+tagline: SERIOUS SAM's BLOG # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Cybersecurity, CTF, Malware analysis, reverse engineering, bug bounty
+  Cybersecurity, CTF, Malware analysis, reverse engineering, Security engineering
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

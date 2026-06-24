@@ -5,7 +5,9 @@ tags:
   - NetworkAdministration
   - SecurityEngineering
 categories: cybersecurity_engineering
+image: images/SL2disp.png
 ---
+
 
 ## INTRODUCTION
 

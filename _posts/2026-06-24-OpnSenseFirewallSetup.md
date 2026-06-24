@@ -1,11 +1,11 @@
 ---
-title: '"SL1: Setting up OPNsense Firewall, Suricata IPS and squid web proxy"'
+title: "SL1: Setting up OPNsense Firewall, Suricata IPS and squid web proxy"
 date: 2026-06-23
 categories: cybersecurity_engineering
 tags:
   - SecurityEngineering
   - NetworkAdministration
-image: /images/SL1disp.png
+image: /images/SL1d.png
 ---
 ## INTRODUCTION
 

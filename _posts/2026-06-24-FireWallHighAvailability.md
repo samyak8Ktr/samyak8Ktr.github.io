@@ -1,11 +1,11 @@
 ---
-title: '"SL2: OpnSense Firewall High Availability Setup"'
+title: "SL2: OpnSense Firewall High Availability Setup"
 date: 2026-06-24
 tags:
   - NetworkAdministration
   - SecurityEngineering
 categories: cybersecurity_engineering
-image: images/SL2disp.png
+image: images/SL2d.png
 ---
 
 

@@ -17,7 +17,7 @@ Welcome to the third installment in my **"Enterprise Cyber Security and Networki
 
 So far we had:
 - Isolated the WAN network from Clients using a firewall server and a switch.
-- Designed a HA firewall fail-over architecture (for the sake on simplification I will remove that from here)
+- Designed a HA firewall fail-over architecture (for the sake on simplification I will remove that from here).
 
 Now the owner of `samyak.corp` had reported, ISPs are becoming unreliable day by day and if, the WAN network starts to face packetloss all the employees go offline.
 

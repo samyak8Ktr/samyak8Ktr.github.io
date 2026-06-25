@@ -34,6 +34,8 @@ We will also take a look how can we use both together by **load balancing**. Pro
 
 We will need three interfaces on the Opnsense VM for this lab. And I recommend to make a separate VM for this (don't use the previous lab VMs).
 
+As always to simulate WAN we will use virtualbox NAT networks, as they have internet connectivity.
+
 Two WAN (NAT networks) and one LAN (internal network)
 ![](images/Pasted image 20260625220759.png)
 

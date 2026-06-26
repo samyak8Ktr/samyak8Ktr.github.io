@@ -1,5 +1,5 @@
 ---
-title: "ECN Lab 1: Setting up OPNsense Firewall, Suricata IPS and squid web proxy"
+title: "SL1: Setting up OPNsense Firewall, Suricata IPS and squid web proxy"
 date: 2026-06-23
 categories: cybersecurity_engineering
 tags:
@@ -11,7 +11,7 @@ image: /images/SL1d.png
 
 **SCENARIO:** We are appointed as security engineer to secure a virtual company named "samyak.corp". Currently there have 50+ employees in the company and there are no security measures, no network management, no AD, nothing just all connected to a LAN.  
 
-Hello Visitor, This post is the first installment in my **"Enterprise Cyber Security and Networking Lab" (ESN Lab)** series. Here I will setup an enterprise level security environment including security solutions such as firewalls, SIEM, IPS and more.
+Hello Visitor, This post is the first installment in my "SOC Home Lab" (SL) series. Here I will setup an enterprise level SOC environment including security solutions such as firewalls and IPS.
 
 In next blog I will try to make a redundant architecture, by setting up a backup firewall so network can continue during failover conditions.
 

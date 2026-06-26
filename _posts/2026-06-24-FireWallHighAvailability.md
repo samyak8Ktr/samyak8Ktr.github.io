@@ -1,5 +1,5 @@
 ---
-title: "ECN Lab 2: OpnSense Firewall High Availability Setup"
+title: "SL2: OpnSense Firewall High Availability Setup"
 date: 2026-06-24
 tags:
   - NetworkAdministration
@@ -12,8 +12,6 @@ image: images/SL2d.png
 ## INTRODUCTION
 
 **SCENARIO:** We are appointed as security engineer to secure a virtual company named "samyak.corp". Currently there have 50+ employees in the company and there are no security measures, no network management, no AD, nothing just all connected to a LAN. 
-
-Welcome to the second post of my **"Enterprise Cyber Security and Networking Lab" (ESN Lab)** series.
 
 So far we had isolated the WAN network from Clients using a firewall server and a switch.
 

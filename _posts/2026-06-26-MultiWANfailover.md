@@ -142,7 +142,7 @@ So I made two rules one for each WAN interface:
 - **WAN 2:** Any traffic from LAN network will be NAT to WAN 2 interface.
 
 Screenshots for reference:
-![](images/Pasted image 20260626023302.png)
+![](/images/Pasted image 20260626095730.png)
 
 making rule for **WAN 1 (WAN interface)**
 ![](images/Pasted image 20260626023309.png)

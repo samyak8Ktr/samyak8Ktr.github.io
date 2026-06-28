@@ -38,7 +38,7 @@ social:
   email: samyakkatiyar2@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/Samyak_katiyar # change to your Twitter homepage
+    - https://twitter.com/Samyak_katiyar # change to your Twitter homepL:qage
     - https://github.com/samyak8Ktr # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -102,14 +102,14 @@ avatar: images/Serious_Sam_logo.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: images/Serious_Sam_logo.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: giscus
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -119,10 +119,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: samyak8Ktr/samyak8Ktr.github.io
+    repo_id: R_kgDOP4EdJw
+    category: Q&A
+    category_id: DIC_kwDOP4EdJ84DAExR
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'

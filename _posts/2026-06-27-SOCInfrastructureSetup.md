@@ -327,7 +327,7 @@ See the log showing sudo was executed.
 
 ### WINDOWS
 
-We will create a user account and add it to the Administrators group.
+We will create a user account **wazuhtest** and add it to the Administrators group.
 
 Open an administrator powershell / CMD:
 

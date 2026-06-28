@@ -4,6 +4,10 @@ date: 2026-06-24
 tags:
   - NetworkAdministration
   - SecurityEngineering
+  - Firewall
+  - Opnsense
+  - High-Availability
+  - Network-security
 categories: cybersecurity_engineering
 image: images/SL2d.png
 ---

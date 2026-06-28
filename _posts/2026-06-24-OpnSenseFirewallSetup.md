@@ -5,7 +5,14 @@ categories: cybersecurity_engineering
 tags:
   - SecurityEngineering
   - NetworkAdministration
-image: /images/SL1d.png
+  - Opnsense
+  - Firewall
+  - Suricata
+  - IPS/IDS
+  - Network-security
+  - web-proxy
+  - squid-web-proxy
+image: /images/SL1dl.png
 ---
 ## INTRODUCTION
 

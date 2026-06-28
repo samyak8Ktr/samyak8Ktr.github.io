@@ -5,6 +5,9 @@ tags:
   - NetworkAdministration
   - SecurityEngineering
   - NetworkEngineering
+  - Failover-architecture
+  - Multi-WAN
+  - Opnsense
 categories: cybersecurity_engineering
 image: /images/SL3d.png
 ---
@@ -13,7 +16,7 @@ image: /images/SL3d.png
 
 **SCENARIO:** We are appointed as security engineer to secure a virtual company named "samyak.corp". Currently there have 50+ employees in the company and there are no security measures, no network management, no AD, nothing just all connected to a LAN. 
 
-Welcome to the third installment in my **"Enterprise Cyber Security and Networking Lab" (ESN Lab)** series.
+Welcome to the third installment in my **"Enterprise Cyber Security and Networking Lab" (ECN Lab)** series.
 
 So far we had:
 - Isolated the WAN network from Clients using a firewall server and a switch.
@@ -58,6 +61,7 @@ sudo ip addr add 10.0.0.132/24 dev eth0
 sudo ip route add default via 10.0.0.254 dev eth0 # set the gateway too
 ```
 
+or we can do:
 ```sh
 sudo nmcli connection modify "Wired connection 1" \
     ipv4.addresses 10.0.0.132/24 \

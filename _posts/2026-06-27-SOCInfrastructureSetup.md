@@ -65,6 +65,9 @@ We will need:
 - Wazuh VM (Cent OS) (10.0.0.4)
 - Kali linux (10.0.0.133)
 
+> Turn off VM which are not required in testing a particular feature
+{: .prompt-tip }
+
 ---
 ## WAZUH SERVER SETUP
 

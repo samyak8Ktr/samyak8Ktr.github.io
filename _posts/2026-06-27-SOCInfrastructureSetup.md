@@ -120,6 +120,11 @@ PERSISTENT_DHCLIENT=yes
 RES_OPTIONS="timeout:2 attempts:5"
 ```
 
+in `/etc/resolv.conf` add this line
+```
+nameserver 8.8.8.8
+```
+
 restart the network service
 ```sh
 sudo systemctl restart network
